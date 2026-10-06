@@ -1,0 +1,52 @@
+{
+  "note": "Evidence from MCA-validated instance documents that contradicts a formalized rule. Each listed rule keeps executing but is reported as WARNING instead of a blocking ERROR, with this evidence attached. Remove an entry to make the rule blocking again.",
+  "schemaRefs": [
+    {
+      "href": "https://www.mca.gov.in/V3XBRL/2016/07/26/Taxonomy/CnI/in-ci-ent-2016-03-31.xsd",
+      "evidence": "INFOBAHN_2024-25.xml (validated by MCA XBRL Validator, FY 2024-25); also CHARVAK_2024-25.xml (sha256 fdffff76ef7ef02d322b771fe52c085bfc885a767f574a6dc0fe580587154d0f)",
+      "sha256": "b0886a578f48a17031ceac0222ad639752b3d3fb6feeeb9f295f78a141eec59f"
+    }
+  ],
+  "rules": [
+    {
+      "ruleId": "CH-4",
+      "evidence": "INFOBAHN_2024-25.xml: FY starting 2024-04-01, validated without NameOfMainProductOrService",
+      "sha256": "b0886a578f48a17031ceac0222ad639752b3d3fb6feeeb9f295f78a141eec59f"
+    },
+    {
+      "ruleId": "CH-5",
+      "evidence": "INFOBAHN_2024-25.xml: validated without DescriptionOfMainProductOrService",
+      "sha256": "b0886a578f48a17031ceac0222ad639752b3d3fb6feeeb9f295f78a141eec59f"
+    },
+    {
+      "ruleId": "CH-6",
+      "evidence": "INFOBAHN_2024-25.xml: validated without NICCodeOfProductOrService",
+      "sha256": "b0886a578f48a17031ceac0222ad639752b3d3fb6feeeb9f295f78a141eec59f"
+    },
+    {
+      "ruleId": "SR-L3996-1",
+      "evidence": "INFOBAHN_2024-25.xml: FY starting 2024-04-01, validated without NameOfMainProductOrService (same requirement as CH-4)",
+      "sha256": "b0886a578f48a17031ceac0222ad639752b3d3fb6feeeb9f295f78a141eec59f"
+    },
+    {
+      "ruleId": "SR-L3997-1",
+      "evidence": "INFOBAHN_2024-25.xml: validated without DescriptionOfMainProductOrService (same requirement as CH-5)",
+      "sha256": "b0886a578f48a17031ceac0222ad639752b3d3fb6feeeb9f295f78a141eec59f"
+    },
+    {
+      "ruleId": "SR-L3998-1",
+      "evidence": "INFOBAHN_2024-25.xml: validated without NICCodeOfProductOrService (same requirement as CH-6)",
+      "sha256": "b0886a578f48a17031ceac0222ad639752b3d3fb6feeeb9f295f78a141eec59f"
+    },
+    {
+      "ruleId": "SR-L2537-2",
+      "evidence": "INFOBAHN_2024-25.xml: validated with WhetherCompanyHasSubsidiaryCompanies=false and NumberOfSubsidiaryCompanies=0, so 'greater than zero' is not enforced unconditionally",
+      "sha256": "b0886a578f48a17031ceac0222ad639752b3d3fb6feeeb9f295f78a141eec59f"
+    },
+    {
+      "ruleId": "SR-L2116-1",
+      "evidence": "CHARVAK_2024-25.xml: related party 'DEVANSH DUA' (Key Management Personnel, transaction Commission) validated without RemunerationForKeyManagerialPersonnel. The rule text quotes 'Key managerial Personnel', which is not a value of the taxonomy enumeration ('Key Management Personnel').",
+      "sha256": "fdffff76ef7ef02d322b771fe52c085bfc885a767f574a6dc0fe580587154d0f"
+    }
+  ]
+}

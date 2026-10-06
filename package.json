@@ -1,0 +1,27 @@
+{
+  "name": "mca-ci-xbrl",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first MCA C&I 2016 XBRL preparation and instance generator",
+  "scripts": {
+    "compile": "node compile.mjs",
+    "test:unit": "node --test taxonomy.test.mjs dimensions.test.mjs typed.test.mjs rules-source.test.mjs rules.test.mjs rule-families.test.mjs calculation.test.mjs numeric.test.mjs applicability.test.mjs richtext.test.mjs import-years.test.mjs audit-charvak.test.mjs workbench.test.mjs mandatory-marks.test.mjs mca-html.test.mjs member-hints.test.mjs carry-forward.test.mjs footnotes.test.mjs pdf-preview.test.mjs audit-v11.test.mjs",
+    "test:gate": "node --test io.test.mjs release-200500.test.mjs",
+    "test:xsd": "node --test xsd.test.mjs",
+    "test:golden": "node --test golden.test.mjs",
+    "test": "npm run -s test:unit && npm run -s test:gate && npm run -s test:xsd && npm run -s test:golden && npm run -s test:assurance",
+    "build": "node build.mjs",
+    "test:browser": "node browser-smoke.mjs",
+    "release": "npm run -s compile && npm test && npm run -s build && node release-gate.mjs",
+    "test:assurance": "node --test assurance.test.mjs"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "playwright-core": "^1.63.0"
+  }
+}
